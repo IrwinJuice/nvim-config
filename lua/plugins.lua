@@ -37,5 +37,13 @@ return require('packer').startup(function(use)
     use { "itchyny/lightline.vim" }
     -- auto save
     use { "Pocco81/auto-save.nvim" }
+    -- fzf
+    use { "junegunn/fzf" }
+    use { "junegunn/fzf.vim" }
+    -- telescope
+    use {
+        "nvim-telescope/telescope.nvim", tag = '0.1.0',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
 end)
