@@ -1,8 +1,8 @@
 local set  =  vim.opt
 
-set.tabstop = 4
-set.softtabstop = 4
-set.shiftwidth = 4
+set.tabstop = 2 
+set.softtabstop = 2
+set.shiftwidth = 2
 set.expandtab = true
 
 set.number = true                         -- Line numbers
@@ -12,7 +12,7 @@ set.encoding = "utf-8"                      -- The encoding displayed
 set.pumheight = 10                        -- Makes popup meNERDTreenu smaller
 set.fileencoding = 'utf-8'                  -- The encoding written to file
 set.ruler = true              			-- Show the cursor position all the time
-set.mouse = a                             -- Enable your mouse
+set.mouse = 'a'                             -- Enable your mouse
 set.splitbelow = true                          -- Horizontal splits will automatically be below
 set.splitright = true                          -- Vertical splits will automatically be to the right
 set.smartindent = true                         -- Makes indenting smart

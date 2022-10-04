@@ -24,9 +24,6 @@ return require('packer').startup(function(use)
     			'kyazdani42/nvim-web-devicons', -- optional, for file icons
   		},
 	}
-
-	-- coc
-	use { "neoclide/coc.nvim", branch = "release" }
     -- sticky header
     use { "wellle/context.vim" }
     -- auto {} () []
@@ -45,5 +42,13 @@ return require('packer').startup(function(use)
         "nvim-telescope/telescope.nvim", tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-
+    -- LSP
+    use "nvim-treesitter/nvim-treesitter"
+    use "neovim/nvim-lspconfig" 
+    use "williamboman/mason.nvim"
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
 end)
