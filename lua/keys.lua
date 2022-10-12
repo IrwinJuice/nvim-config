@@ -51,9 +51,27 @@ local lsp_flags = {
 require('lspconfig')['rust_analyzer'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
-    capabilities = capabilities
+    capabilities = capabilities,
+    settings = {
+        ["rust-analyzer"] = {
+            imports = {
+                granularity = {
+                    group = "module",
+                },
+                prefix = "self",
+            },
+            cargo = {
+                buildScripts = {
+                    enable = true,
+                },
+            },
+            procMacro = {
+                enable = true
+            },
+        }
+    }
 }
-require('lspconfig')['jdtls'].setup{
+require('lspconfig')['cssls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities
