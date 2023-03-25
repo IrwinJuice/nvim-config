@@ -20,7 +20,7 @@ vim.keymap.set('n', 'fh', builtin.help_tags, {})
 local on_attach = function(client, bufnr)
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-  
+
     -- Mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local bufopts = { noremap=true, silent=true, buffer=bufnr }
@@ -42,7 +42,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local lsp_flags = {
   -- This is the default in Nvim 0.7+
@@ -91,7 +91,7 @@ require('lspconfig')['sqlls'].setup{
     flags = lsp_flags,
     capabilities = capabilities
 }
-require('lspconfig')['sumneko_lua'].setup{
+require('lspconfig')['lua_ls'].setup{
   on_attach = on_attach,
   flags = lsp_flags,
   capabilities = capabilities

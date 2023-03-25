@@ -7,12 +7,10 @@ require'nvim-treesitter.configs'.setup {
         "rust",
         "dockerfile",
         "html",
-        "java",
         "javascript",
         "scss",
         "sql",
         "toml",
-        "bash"
     },
 
   -- Automatically install missing parsers when entering buffer

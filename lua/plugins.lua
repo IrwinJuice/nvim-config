@@ -8,6 +8,8 @@ vim.cmd([[
 
 return require('packer').startup(function(use)
 	use("wbthomason/packer.nvim")
+  
+  use { 'smithbm2316/centerpad.nvim' }
 	-- Themes
 	-- Catppuccin
 	use { "catppuccin/nvim", as = "catppuccin" }
